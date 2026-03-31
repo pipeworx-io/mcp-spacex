@@ -1,15 +1,3 @@
-/**
- * SpaceX MCP — wraps SpaceX API v4 (free, no auth)
- *
- * Tools:
- * - get_latest_launch: Most recent SpaceX launch
- * - get_next_launch: Next upcoming SpaceX launch
- * - get_past_launches: Recent past launches (configurable limit)
- * - get_rockets: All SpaceX rockets
- * - get_crew: SpaceX crew members
- * - get_starlink: Starlink satellite info
- */
-
 interface McpToolDefinition {
   name: string;
   description: string;
@@ -24,6 +12,19 @@ interface McpToolExport {
   tools: McpToolDefinition[];
   callTool: (name: string, args: Record<string, unknown>) => Promise<unknown>;
 }
+
+/**
+ * SpaceX MCP — wraps SpaceX API v4 (free, no auth)
+ *
+ * Tools:
+ * - get_latest_launch: Most recent SpaceX launch
+ * - get_next_launch: Next upcoming SpaceX launch
+ * - get_past_launches: Recent past launches (configurable limit)
+ * - get_rockets: All SpaceX rockets
+ * - get_crew: SpaceX crew members
+ * - get_starlink: Starlink satellite info
+ */
+
 
 const BASE_URL = 'https://api.spacexdata.com/v4';
 
