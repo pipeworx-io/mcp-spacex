@@ -1,38 +1,54 @@
 # mcp-spacex
 
-MCP server for SpaceX data. Get launch info, rocket specs, crew members, and Starlink satellite tracking via the SpaceX API v4 — free, no API key required.
+SpaceX MCP — wraps SpaceX API v4 (free, no auth)
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_latest_launch` | Get the most recent SpaceX launch |
-| `get_next_launch` | Get the next upcoming SpaceX launch |
-| `get_past_launches` | Get recent past launches sorted by date |
-| `get_rockets` | List all SpaceX rockets with specs |
-| `get_crew` | List SpaceX crew members |
-| `get_starlink` | Get Starlink satellite info |
 
 ## Quick Start
+
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
   "mcpServers": {
     "spacex": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://gateway.pipeworx.io/spacex/mcp"]
+      "url": "https://gateway.pipeworx.io/spacex/mcp"
     }
   }
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use spacex
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Spacex data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
