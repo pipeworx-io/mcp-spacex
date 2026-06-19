@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/pipeworx-io-mcp-spacex-badge.png)](https://mseep.ai/app/pipeworx-io-mcp-spacex)
+
 # mcp-spacex
 
 SpaceX MCP — wraps SpaceX API v4 (free, no auth)
