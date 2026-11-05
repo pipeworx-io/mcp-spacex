@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-spacex",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SpaceX MCP — revival of the (dead) SpaceX API.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "spacex",
     "gatewaySlug": "spacex",
-    "sourceHash": "v1-eafa3a4d32c67dd8139698bd9aa24ea51aecdc78945c7dbe5e7119d95e84cbe2",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-68ac8a97124455a69d85ede4b162f1522bc4eebf3580ebce28b88a0a5a58a08f",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
